@@ -4,9 +4,9 @@ const app = express();
 
 app.get("/sorted-names", (req, res) => {
     const obj = [
-        { name: "John", age: 25 },
-        { name: "Jane", age: 24 },
-        { name: "Jim", age: 30 },
+        { name: "Dev", age: 25 },
+        { name: "Zendaya", age: 24 },
+        { name: "Aloknath", age: 30 },
     ];
     const sorted = obj.sort((a, b) => a.age - b.age);
     res.send(sorted);
