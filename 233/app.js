@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
     }
 );
 
-app.post('/login', (req, res, next) => {
+app.post('/login', (req, res) => {
     let name = req.body.name;
     let password = req.body.password;
     let message = req.body.message;
@@ -21,7 +21,7 @@ app.post('/login', (req, res, next) => {
     res.send(html);
 });
 
-app.get('/show-vowel', (req, res, next) => {
+app.get('/show-vowel', (req, res) => {
     let message = req.query.message;
     let vowels = message.match(/[aeiou]/gi);
     res.send("Vowels: " + vowels.length);
